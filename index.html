@@ -252,12 +252,16 @@
                 display: grid;
                 grid-template-columns: 80px 1fr;
                 grid-template-areas: 
+                    "top top"
                     "avatar stats"
-                    "info info";
-                gap: 20px;
+                    "bio bio";
+                gap: 12px 20px;
                 padding: 0 16px;
                 margin-bottom: 24px;
                 align-items: center;
+            }
+            .profile-info {
+                display: contents;
             }
             .profile-avatar-container {
                 grid-area: avatar;
@@ -269,12 +273,9 @@
                 height: 77px;
                 padding: 2px;
             }
-            .profile-info {
-                grid-area: info;
-                text-align: left;
-            }
             .profile-top {
-                margin-bottom: 4px;
+                grid-area: top;
+                margin-bottom: 0;
             }
             .username {
                 font-size: 16px;
@@ -285,6 +286,9 @@
                 justify-content: space-around;
                 gap: 0;
                 margin-bottom: 0;
+            }
+            .bio {
+                grid-area: bio;
             }
             .stat-item {
                 display: flex;
